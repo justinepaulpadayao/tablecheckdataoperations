@@ -2,11 +2,14 @@ import duckdb
 import pandas as pd
 import os
 
+
 def connect_to_duckdb():
     return duckdb.connect(':memory:')
 
+
 def load_raw_data(con, file_path):
     con.execute(f"CREATE TABLE raw_data AS SELECT * FROM read_csv_auto('{file_path}')")
+
 
 def clean_and_transform_data(con):
     con.execute("""
@@ -23,6 +26,7 @@ def clean_and_transform_data(con):
           AND food_cost IS NOT NULL
     """)
 
+
 def create_restaurant_stats(con):
     con.execute("""
         CREATE TABLE restaurant_stats AS
@@ -33,6 +37,7 @@ def create_restaurant_stats(con):
         FROM cleaned_data
         GROUP BY restaurant_names
     """)
+
 
 def create_popular_dishes(con):
     con.execute("""
@@ -48,6 +53,7 @@ def create_popular_dishes(con):
         ORDER BY restaurant_names, order_count DESC
     """)
 
+
 def create_profitable_dishes(con):
     con.execute("""
         CREATE TABLE profitable_dishes AS
@@ -61,6 +67,7 @@ def create_profitable_dishes(con):
         QUALIFY profit_rank <= 5
         ORDER BY restaurant_names, total_revenue DESC
     """)
+
 
 def create_customer_stats(con):
     con.execute("""
@@ -82,6 +89,7 @@ def create_customer_stats(con):
         ORDER BY restaurants_visited DESC
     """)
 
+
 def create_frequent_visitors(con):
     con.execute("""
         CREATE TABLE frequent_visitors AS
@@ -102,8 +110,10 @@ def create_frequent_visitors(con):
         ORDER BY visit_count DESC
     """)
 
+
 def export_to_csv(con, table_name, output_path):
     con.execute(f"COPY {table_name} TO '{output_path}' (HEADER, DELIMITER ',')")
+
 
 def main():
     try:
@@ -129,6 +139,7 @@ def main():
     finally:
         if 'con' in locals():
             con.close()
+
 
 if __name__ == "__main__":
     main()

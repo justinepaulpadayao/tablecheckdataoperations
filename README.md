@@ -66,7 +66,7 @@ This script:
 ## Visualizations (Looker Studio)
 
 The dashboard for this project can be accessed at the following URL:
-[Looker Studio Dashboard](https://lookerstudio.google.com/reporting/406a761e-2ee9-4709-b732-cfd86eb757e6)
+[Looker Studio Dashboard](https://lookerstudio.google.com/u/2/reporting/406a761e-2ee9-4709-b732-cfd86eb757e6/page/IqKGE)
 
 The Looker Studio dashboard answers the following questions:
 
