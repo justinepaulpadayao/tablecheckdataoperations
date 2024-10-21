@@ -1,0 +1,21 @@
+restaurant_names,food_names,total_revenue,profit_rank
+bean-juice-stand,honey,5945.50,1
+bean-juice-stand,ice cream,5879.00,2
+bean-juice-stand,tea,5821.50,3
+bean-juice-stand,chicken,5793.00,4
+bean-juice-stand,cereal,5769.50,5
+johnnys-cashew-stand,juice,5989.00,1
+johnnys-cashew-stand,fruit,5958.00,2
+johnnys-cashew-stand,yogurt,5910.50,3
+johnnys-cashew-stand,oil,5763.50,4
+johnnys-cashew-stand,salad,5758.00,5
+the-ice-cream-parlor,coffee,5789.50,1
+the-ice-cream-parlor,pasta,5761.50,2
+the-ice-cream-parlor,beans,5754.50,3
+the-ice-cream-parlor,fruit,5699.50,4
+the-ice-cream-parlor,cashews,5692.50,5
+the-restaurant-at-the-end-of-the-universe,cheese,5861.50,1
+the-restaurant-at-the-end-of-the-universe,oil,5824.00,2
+the-restaurant-at-the-end-of-the-universe,wine,5805.00,3
+the-restaurant-at-the-end-of-the-universe,fruit,5796.00,4
+the-restaurant-at-the-end-of-the-universe,yogurt,5736.50,5
