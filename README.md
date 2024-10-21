@@ -91,6 +91,7 @@ The Looker Studio dashboard answers the following questions:
    - Data source: profitable_dishes table
 
 5. Who visited each store the most, and who visited the most stores?
+
    a. Chart Name: "Top Customers by Restaurants Visited"
       - Type: Table
       - Data source: customer_stats table
